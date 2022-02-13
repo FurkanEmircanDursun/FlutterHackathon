@@ -14,12 +14,8 @@ class _profilSayfasiState extends State<profilSayfasi> {
   late List<GDPData> _chartData;
 
   @override
-  void initState() async {
-    /*
-    var uid = FirebaseAuth.instance.currentUser?.uid;
-    await var a = FirebaseFirestore.instance.collection("person").doc(uid).get();
-    widget.isimSoyisim = a.data()!['NameAndSurname'];
-*/
+  void initState() {
+
     _chartData = getChartData();
   }
 
