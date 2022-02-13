@@ -1,43 +1,6 @@
-import 'package:atik_yonetim/ekranlar/kayitOlEkrani.dart';
+/*
 import 'package:atik_yonetim/ekranlar/mailSifreEkrani.dart';
-import 'package:atik_yonetim/ekranlar/navigasyonBarEkrani.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  var uid = FirebaseAuth.instance.currentUser?.uid;
-  var a = await FirebaseFirestore.instance.collection("person").doc(uid).get();
-  FirebaseAuth.instance.authStateChanges().listen((User? user) {
-    if (user == null) {
-      runApp(BenimUygulamam());
-    } else {
-      String isimSoyisim = a.data()!['NameAndSurname'];
-
-      runApp(MyApp(isimSoyisim));
-    }
-  });
-
-  //var _fireStore=fireStoreService();
-  //var uid= FirebaseAuth.instance.currentUser?.uid;
-
-  //List<myData> myList= await _fireStore.getRequests("gTPpjs8k0Eh8KcIueXzE7HFCjZ43");
-}
-
-//void main() => runApp(BenimUygulamam());
-
-class BenimUygulamam extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ilkSayfa(),
-    );
-  }
-}
 
 class ilkSayfa extends StatefulWidget {
   @override
@@ -48,13 +11,6 @@ class _ilkSayfaState extends State<ilkSayfa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text(
-          'Atık Yönetimi Uygulaması',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
       backgroundColor: Colors.green,
       body: SafeArea(
         child: Center(
@@ -93,6 +49,12 @@ değerli olabilir ki ''',
                 Expanded(
                   flex: 2,
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.green, spreadRadius: 3),
+                      ],
+                    ),
                     margin: EdgeInsets.symmetric(vertical: 20),
                     width: 335.4,
                     color: Color(0xff009688),
@@ -100,8 +62,7 @@ değerli olabilir ki ''',
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => GirisYapEkrani()),
+                          MaterialPageRoute(builder: (context) => MyApp()),
                         );
                       },
                       child: Text('Giriş Yap',
@@ -116,13 +77,7 @@ değerli olabilir ki ''',
                     width: 335.4,
                     color: Color(0xff110F4A),
                     child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => KayitOlEkrani()),
-                        );
-                      },
+                      onPressed: () {},
                       child: Text('Kayıt Ol',
                           style: TextStyle(color: Colors.white)),
                     ),
@@ -136,3 +91,4 @@ değerli olabilir ki ''',
     );
   }
 }
+*/
